@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignIdFor(User::class)->constrained()->cascadeOnUpdate()->restrictOnDelete();
             $table->string('name');
             $table->string('storage_path')->unique();
+            $table->string('thumb_path')->nullable()->unique();
             $table->enum('kind', ['audio', 'video', 'image']);
             $table->string('caption')->nullable();
             $table->timestamps();

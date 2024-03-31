@@ -26,6 +26,7 @@ class MediaFactory extends Factory
             'user_id' => User::first()->id,
             'name' => implode(' ', fake()->words()),
             'storage_path' => $path,
+            'thumb_path' => $path,
             'kind' => 'image',
             'caption' => implode(' ', fake()->words())
         ];
